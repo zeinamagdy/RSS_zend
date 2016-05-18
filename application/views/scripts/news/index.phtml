@@ -1,0 +1,26 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="<?=$this->baseUrl()?>">News</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="<?=$this->baseUrl()?>">Home</a></li>
+      <li><a href="<?=$this->baseUrl()?>/news/">Add Rss</a></li>
+    </ul>
+  </div>
+</nav>
+
+<h1>RSS feeds</h1>
+
+
+<?php
+	echo $this->form;
+
+echo "<br/><br/><table><tr> <th>RSS linkes</th></tr>";
+foreach ($this->Rss as $key => $value) {
+			# code...
+	echo "<tr><td><td><a  href='".($value['path'])."'> ".$value['path']." </a></td></td></tr>";
+
+		}		
+
+echo "</table>";
